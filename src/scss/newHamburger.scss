@@ -12,7 +12,7 @@ $primario: #436775;
 	height: 2px;
 	background: $primario;
 	position: absolute;
-    bottom: 14px;
+	bottom: 14px;
     border-radius:0 2px 3px 0;
 	left: 0;
 	right: 22px;
@@ -91,7 +91,7 @@ $primario: #436775;
 
 .head .icon svg circle {
 	fill: none;
-	stroke: $primario;
+	stroke:  $primario;
 	stroke-width: .5;
 	stroke-linecap: round;
 	stroke-linejoin: round;
