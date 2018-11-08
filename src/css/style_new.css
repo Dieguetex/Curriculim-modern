@@ -283,6 +283,10 @@ body .caption span.border, html .caption span.border {
   /* mix-blend-mode:screen; */
 }
 
+body .caption span.border a, html .caption span.border a {
+  text-decoration: none;
+}
+
 body .caption span.border1, html .caption span.border1 {
   background-color: rgba(255, 255, 255, 0.801);
   color: #111;

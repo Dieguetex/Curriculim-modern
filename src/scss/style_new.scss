@@ -148,6 +148,9 @@ body, html {
   
   .caption span{
     &.border {
+      a{
+        text-decoration: none;
+      }
       background-color: rgba(255, 255, 255, 0.801);
       color:  #111;
       padding: 14px;
