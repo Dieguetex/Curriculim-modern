@@ -30,7 +30,7 @@ $primario: #436775;
 .head .icon div {
 	position: absolute;
     left: 50%;
-    top: 52%;
+    top: 53%;
 	-webkit-transform: translateX(-50%) translateY(-6px);
 	transform: translateX(-50%) translateY(-6px);
 	display: block;
@@ -92,7 +92,7 @@ $primario: #436775;
 .head .icon svg circle {
 	fill: none;
 	stroke:  $primario;
-	stroke-width: .5;
+	stroke-width: .3;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	stroke-dasharray: 39 39;
@@ -109,6 +109,7 @@ $primario: #436775;
 .head.animate svg circle {
 	stroke-dashoffset: 0;
 	stroke: $primario;
+	stroke-width: .5;
 	-webkit-transition: stroke-dashoffset .5s;
 	transition: all .5s /* $easing */;
 }
