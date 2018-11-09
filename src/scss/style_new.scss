@@ -3,6 +3,9 @@
   box-sizing: border-box;
   /* font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif; */
 }
+body > div{
+  height: 0;
+}
 body, html {
   height: 100%;
   margin: 0;
@@ -248,7 +251,7 @@ body, html {
     position: absolute; 
     top: 22%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
   }
   .caption span{
     &.border {
