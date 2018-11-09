@@ -384,7 +384,7 @@ body div.captionHeader, html div.captionHeader {
   position: absolute;
   top: 22%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
 }
 
 body .caption span.border, html .caption span.border {
