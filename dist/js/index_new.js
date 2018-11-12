@@ -47,31 +47,31 @@ class Main_new {
     animarSkills(){
         this.nodeBas.forEach(item => {
             if (this.isScrolledIntoView(item)){
-                item.classList.remove('empty');
+                item.classList.add('bar');
                 item.classList.add('basic');
             } else{
                 item.classList.remove('basic');
-                item.classList.add('empty');
+                item.classList.remove('bar');
             }
             
         });
         this.nodeAdv.forEach(item => {
             if (this.isScrolledIntoView(item)){
-                item.classList.remove('empty');
+                item.classList.add('bar');
                 item.classList.add('advanced');
             } else{
                 item.classList.remove('advanced');
-                item.classList.add('empty');
+                item.classList.remove('bar');
             }
             
         });
         this.nodeExp.forEach(item => {
             if (this.isScrolledIntoView(item)){
-                item.classList.remove('empty');
+                item.classList.add('bar');
                 item.classList.add('expert');
             } else{
                 item.classList.remove('expert');
-                item.classList.add('empty');
+                item.classList.remove('bar');
             }
             
         });

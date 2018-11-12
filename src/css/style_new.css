@@ -4,7 +4,7 @@
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .head .line {
@@ -130,6 +130,10 @@ body, html {
   font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.8;
   color: #777;
+}
+
+body main div.bgimg-1, html main div.bgimg-1 {
+  z-index: -1;
 }
 
 body .container, html .container {
@@ -266,6 +270,12 @@ body .programador .containerSkills div.skillsIcons i, body .londres .containerSk
   color: #436775;
 }
 
+@keyframes download {
+  from {
+    width: 100%;
+  }
+}
+
 @keyframes load {
   from {
     width: 0%;
@@ -313,28 +323,29 @@ body .programador .containerSkills .bar::before, body .londres .containerSkills 
   -o-animation: load 2s 0s;
 }
 
-body .programador .containerSkills .bar.empty::before, body .londres .containerSkills .bar.empty::before, body .realizacion .containerSkills .bar.empty::before, html .programador .containerSkills .bar.empty::before, html .londres .containerSkills .bar.empty::before, html .realizacion .containerSkills .bar.empty::before {
-  width: 0%;
-}
-
 body .programador .containerSkills .bar.learning::before, body .londres .containerSkills .bar.learning::before, body .realizacion .containerSkills .bar.learning::before, html .programador .containerSkills .bar.learning::before, html .londres .containerSkills .bar.learning::before, html .realizacion .containerSkills .bar.learning::before {
   width: calc(20% - 10px);
+  animation: load 2s 0s;
 }
 
 body .programador .containerSkills .bar.basic::before, body .londres .containerSkills .bar.basic::before, body .realizacion .containerSkills .bar.basic::before, html .programador .containerSkills .bar.basic::before, html .londres .containerSkills .bar.basic::before, html .realizacion .containerSkills .bar.basic::before {
   width: calc(40% - 10px);
+  animation: load 2s 0s;
 }
 
 body .programador .containerSkills .bar.intermediate::before, body .londres .containerSkills .bar.intermediate::before, body .realizacion .containerSkills .bar.intermediate::before, html .programador .containerSkills .bar.intermediate::before, html .londres .containerSkills .bar.intermediate::before, html .realizacion .containerSkills .bar.intermediate::before {
   width: calc(60% - 10px);
+  animation: load 2s 0s;
 }
 
 body .programador .containerSkills .bar.advanced::before, body .londres .containerSkills .bar.advanced::before, body .realizacion .containerSkills .bar.advanced::before, html .programador .containerSkills .bar.advanced::before, html .londres .containerSkills .bar.advanced::before, html .realizacion .containerSkills .bar.advanced::before {
   width: calc(80% - 10px);
+  animation: load 2s 0s;
 }
 
 body .programador .containerSkills .bar.expert::before, body .londres .containerSkills .bar.expert::before, body .realizacion .containerSkills .bar.expert::before, html .programador .containerSkills .bar.expert::before, html .londres .containerSkills .bar.expert::before, html .realizacion .containerSkills .bar.expert::before {
   width: calc(100% - 10px);
+  animation: load 2s 0s;
 }
 
 body .programador > h2, html .programador > h2 {
@@ -354,6 +365,7 @@ body .bgimg-1, html .bgimg-1 {
   background-image: url("../../dist/assets/IMG_20160807_133956_HDR.jpg");
   min-height: 100vh;
   background-position: 42%;
+  z-index: 1;
   /* min-height: 100%; */
 }
 

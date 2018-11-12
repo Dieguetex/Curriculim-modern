@@ -14,6 +14,12 @@ body, html {
   line-height: 1.8;
   color: #777;
 
+  main{
+    div.bgimg-1{
+      z-index: -1;
+    }
+  }
+
   .container{
     display: grid;
     grid-template-columns: 15% 35% 35% 15%;
@@ -136,6 +142,11 @@ body, html {
           color: #436775;
         }
       }
+      @keyframes download{
+        from {
+          width: 100%
+        }
+      }
 
       @keyframes load{
         from {
@@ -180,23 +191,25 @@ body, html {
         -o-animation: load 2s 0s;
       }
       
-      .bar.empty::before{
-        width: 0%;
-      }
       .bar.learning::before{
         width: calc(20% - 10px);
+        animation: load 2s 0s;
       }
       .bar.basic::before{
         width: calc(40% - 10px);
+        animation: load 2s 0s;
       }
       .bar.intermediate::before{
         width: calc(60% - 10px);
+        animation: load 2s 0s;
       }
       .bar.advanced::before{
         width: calc(80% - 10px);
+        animation: load 2s 0s;
       }
       .bar.expert::before{
         width: calc(100% - 10px);
+        animation: load 2s 0s;
       }
     }
   }
@@ -219,6 +232,7 @@ body, html {
     background-image: url("../../dist/assets/IMG_20160807_133956_HDR.jpg");
     min-height: 100vh;
     background-position: 42%;
+    z-index: 1;
     /* min-height: 100%; */
   }
   
