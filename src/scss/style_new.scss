@@ -102,7 +102,7 @@ body, html {
     text-align: justify;
   }
 
-  .programador{
+  .programador, .londres, .realizacion{
     color: #282E34;
     background-color: white;
     text-align:center;
@@ -196,15 +196,7 @@ body, html {
     }
   }
 
-  .londres{
-    color: #282E34;
-    background-color: white;
-    text-align:center;
-    padding:50px 80px;
-    text-align: justify;
-  }
-
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
     position: relative;
     opacity: 0.65;
     background-attachment: fixed;
@@ -227,8 +219,14 @@ body, html {
   }
   
   .bgimg-3 {
-    background-image: url("../../dist/assets/IMG_20160606_205514.jpg");
+    background-image: url("../../dist/assets/IMG_20160606_205514\ -\ copia.jpg");
     min-height: 400px;
+  }
+
+  .bgimg-4{
+    background-image: url("../../dist/assets/IMG_20180419_190150\ -\ copia.jpg");
+    min-height: 400px;
+    background-position: 45%;
   }
   
   .caption {
@@ -317,7 +315,7 @@ body, html {
 } 
 /* Turn off parallax scrolling for tablets and phones */
 /*   @media only screen and (max-device-width: 1024px) {
-      .bgimg-1, .bgimg-2, .bgimg-3 {
+      .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
           background-attachment: scroll;
       }
   } */
