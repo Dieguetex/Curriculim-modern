@@ -44,18 +44,13 @@ body, html {
     font-size: 2.5em;
     border-radius: 100%;
     padding-top: 5px;
-/*     margin-left: 1rem; */
+    transition: all 250ms;
     }
-/*     .noMargin{
-      margin-left: -1rem;
-    } */
-
   }
 
   nav.navMobile{
     background-color: rgba(51, 51, 51, 0.9);
     position: fixed;
-    overflow: auto;
     top: 4rem;
     right: -100%;
     width: 100%;
@@ -92,7 +87,7 @@ body, html {
         will-change: transform, opacity;
     }
     
-}
+  }
 
   .intro{
     color: #777;
@@ -108,6 +103,9 @@ body, html {
     text-align:center;
     padding:50px 80px;
     text-align: justify;
+    p {
+      margin-top: 1.5rem;
+    }
     .containerSkills{
       h2{
         margin-top: 0;
@@ -129,7 +127,11 @@ body, html {
         grid-column-start: 1;
         grid-column-end: 2;
         i{
-          width: 100%;
+          display: block;
+          text-align: end;
+          margin-right: 1rem;
+          margin-bottom: .3rem;
+          justify-content: end;
           font-size: 2.45em;
           color: #436775;
         }
@@ -178,6 +180,9 @@ body, html {
         -o-animation: load 2s 0s;
       }
       
+      .bar.empty::before{
+        width: 0%;
+      }
       .bar.learning::before{
         width: calc(20% - 10px);
       }
@@ -193,6 +198,11 @@ body, html {
       .bar.expert::before{
         width: calc(100% - 10px);
       }
+    }
+  }
+  .programador{
+    >h2{
+      display: none;
     }
   }
 
@@ -311,8 +321,111 @@ body, html {
       grid-column-end: 4;
       margin-bottom: 2rem;
     }
-}
+  }
 } 
+
+@media screen and (min-width:620px ) {
+  body{
+    .head{
+      display: none;
+    }
+    nav.navMobile{
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 1;
+      background-color: rgba(51, 51, 51, 0.589);
+      z-index: 10;
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        li{
+          a {
+              padding: 0.5rem  1rem;
+              display: block;
+              transition: color 0.2s linear;
+              border-top: none;
+              &:hover {
+                padding-left: 16px;
+                color: rgb(85, 85, 85);
+                background-color: rgba(141, 141, 141, 0);
+            }
+          }
+        }
+      }  
+    }
+  
+    .caption span.border1, html .caption span.border1{
+      font-size: 2rem;
+    }
+  }
+}
+@media screen and (min-width:820px ) {
+  body, html{
+    .caption span.border, div.captionHeader, .caption span.border, div.captionHeader{
+      top: 50%;
+    }
+    .icons, .icons{
+      grid-template-columns: 50% 50% 50% 50%;
+      top: 0;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-color: transparent;
+      height: 2.8rem;
+      z-index: 15;
+      justify-content: flex-start;
+      width: auto;
+      .icon{
+        color: white;
+        font-size: 2em;
+        &:hover{
+          color: rgb(85, 85, 85);
+          background-color: rgba(141, 141, 141, 0);
+        }
+      }
+    }
+    .intro, .londres, .realizacion {
+      padding: 8rem 8rem;
+    }
+    .programador{
+      h2{
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 2rem;
+      
+      div.parrafoBloqueSkills{
+        margin-right: 2rem;
+      }
+
+      .containerSkills{
+        h2{
+          align-self: end;
+        }
+      }
+      
+    }
+    
+    .bgimg-2, .bgimg-3{
+      min-height: 600px;
+    }
+    .bgimg-4{
+      min-height: 600px;
+      background-image: url("../../dist/assets/IMG_20180419_190150.jpg");
+    }
+  }
+}
+
+@media screen and (min-width:1800px ) {
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 /*   @media only screen and (max-device-width: 1024px) {
       .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {

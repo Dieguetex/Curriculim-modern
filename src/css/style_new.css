@@ -154,9 +154,6 @@ body .icons, html .icons {
   width: 100%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.801);
-  /*     .noMargin{
-      margin-left: -1rem;
-    } */
 }
 
 body .icons a, html .icons a {
@@ -169,13 +166,12 @@ body .icons .icon, html .icons .icon {
   font-size: 2.5em;
   border-radius: 100%;
   padding-top: 5px;
-  /*     margin-left: 1rem; */
+  transition: all 250ms;
 }
 
 body nav.navMobile, html nav.navMobile {
   background-color: rgba(51, 51, 51, 0.9);
   position: fixed;
-  overflow: auto;
   top: 4rem;
   right: -100%;
   width: 100%;
@@ -231,6 +227,10 @@ body .programador, body .londres, body .realizacion, html .programador, html .lo
   text-align: justify;
 }
 
+body .programador p, body .londres p, body .realizacion p, html .programador p, html .londres p, html .realizacion p {
+  margin-top: 1.5rem;
+}
+
 body .programador .containerSkills, body .londres .containerSkills, body .realizacion .containerSkills, html .programador .containerSkills, html .londres .containerSkills, html .realizacion .containerSkills {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
@@ -257,7 +257,11 @@ body .programador .containerSkills div.skillsIcons, body .londres .containerSkil
 }
 
 body .programador .containerSkills div.skillsIcons i, body .londres .containerSkills div.skillsIcons i, body .realizacion .containerSkills div.skillsIcons i, html .programador .containerSkills div.skillsIcons i, html .londres .containerSkills div.skillsIcons i, html .realizacion .containerSkills div.skillsIcons i {
-  width: 100%;
+  display: block;
+  text-align: end;
+  margin-right: 1rem;
+  margin-bottom: .3rem;
+  justify-content: end;
   font-size: 2.45em;
   color: #436775;
 }
@@ -309,6 +313,10 @@ body .programador .containerSkills .bar::before, body .londres .containerSkills 
   -o-animation: load 2s 0s;
 }
 
+body .programador .containerSkills .bar.empty::before, body .londres .containerSkills .bar.empty::before, body .realizacion .containerSkills .bar.empty::before, html .programador .containerSkills .bar.empty::before, html .londres .containerSkills .bar.empty::before, html .realizacion .containerSkills .bar.empty::before {
+  width: 0%;
+}
+
 body .programador .containerSkills .bar.learning::before, body .londres .containerSkills .bar.learning::before, body .realizacion .containerSkills .bar.learning::before, html .programador .containerSkills .bar.learning::before, html .londres .containerSkills .bar.learning::before, html .realizacion .containerSkills .bar.learning::before {
   width: calc(20% - 10px);
 }
@@ -327,6 +335,10 @@ body .programador .containerSkills .bar.advanced::before, body .londres .contain
 
 body .programador .containerSkills .bar.expert::before, body .londres .containerSkills .bar.expert::before, body .realizacion .containerSkills .bar.expert::before, html .programador .containerSkills .bar.expert::before, html .londres .containerSkills .bar.expert::before, html .realizacion .containerSkills .bar.expert::before {
   width: calc(100% - 10px);
+}
+
+body .programador > h2, html .programador > h2 {
+  display: none;
 }
 
 body .bgimg-1, body .bgimg-2, body .bgimg-3, body .bgimg-4, html .bgimg-1, html .bgimg-2, html .bgimg-3, html .bgimg-4 {
@@ -445,6 +457,92 @@ body footer p, html footer p {
   grid-column-start: 2;
   grid-column-end: 4;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 620px) {
+  body .head {
+    display: none;
+  }
+  body nav.navMobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    background-color: rgba(51, 51, 51, 0.589);
+    z-index: 10;
+  }
+  body nav.navMobile ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  body nav.navMobile ul li a {
+    padding: 0.5rem  1rem;
+    display: block;
+    transition: color 0.2s linear;
+    border-top: none;
+  }
+  body nav.navMobile ul li a:hover {
+    padding-left: 16px;
+    color: #555555;
+    background-color: rgba(141, 141, 141, 0);
+  }
+  body .caption span.border1, body html .caption span.border1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  body .caption span.border, body div.captionHeader, body .caption span.border, body div.captionHeader, html .caption span.border, html div.captionHeader, html .caption span.border, html div.captionHeader {
+    top: 50%;
+  }
+  body .icons, body .icons, html .icons, html .icons {
+    grid-template-columns: 50% 50% 50% 50%;
+    top: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: transparent;
+    height: 2.8rem;
+    z-index: 15;
+    justify-content: flex-start;
+    width: auto;
+  }
+  body .icons .icon, body .icons .icon, html .icons .icon, html .icons .icon {
+    color: white;
+    font-size: 2em;
+  }
+  body .icons .icon:hover, body .icons .icon:hover, html .icons .icon:hover, html .icons .icon:hover {
+    color: #555555;
+    background-color: rgba(141, 141, 141, 0);
+  }
+  body .intro, body .londres, body .realizacion, html .intro, html .londres, html .realizacion {
+    padding: 8rem 8rem;
+  }
+  body .programador, html .programador {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2rem;
+  }
+  body .programador h2, html .programador h2 {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  body .programador div.parrafoBloqueSkills, html .programador div.parrafoBloqueSkills {
+    margin-right: 2rem;
+  }
+  body .programador .containerSkills h2, html .programador .containerSkills h2 {
+    align-self: end;
+  }
+  body .bgimg-2, body .bgimg-3, html .bgimg-2, html .bgimg-3 {
+    min-height: 600px;
+  }
+  body .bgimg-4, html .bgimg-4 {
+    min-height: 600px;
+    background-image: url("../../dist/assets/IMG_20180419_190150.jpg");
+  }
 }
 
 /* Turn off parallax scrolling for tablets and phones */
