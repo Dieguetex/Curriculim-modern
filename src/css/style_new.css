@@ -471,6 +471,15 @@ body footer p, html footer p {
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 320px) {
+  body .intro, html .intro {
+    padding: 2rem;
+  }
+  body .londres, body .programador, body .realizacion, html .londres, html .programador, html .realizacion {
+    padding: 2rem;
+  }
+}
+
 @media screen and (min-width: 620px) {
   body .head {
     display: none;

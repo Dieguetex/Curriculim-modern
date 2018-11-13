@@ -336,6 +336,19 @@ body, html {
   }
 } 
 
+@media screen and (max-width:320px ) {
+  body .intro, html .intro{
+    padding: 2rem;
+  }
+  body, html{
+
+    .londres, .programador, .realizacion{
+      padding: 2rem;
+    }
+
+  }
+}
+
 @media screen and (min-width:620px ) {
   body{
     .head{
