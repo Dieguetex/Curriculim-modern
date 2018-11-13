@@ -9,11 +9,13 @@ export class Main_new {
     animarSkills(){
         this.nodeBas.forEach(item => {
             if (this.isScrolledIntoView(item)){
+                item.classList.remove('hidden');
                 item.classList.add('bar');
                 item.classList.add('basic');
             } else{
                 item.classList.remove('basic');
                 item.classList.remove('bar');
+                item.classList.add('hidden');
             }
             
         });
@@ -46,10 +48,9 @@ export class Main_new {
         let elemBottom = rect.bottom;
     
         // Only completely visible elements return true:
-        let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+        /* let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight); */
         // Partially visible elements return true:
-        //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-        
+        let isVisible = elemTop < window.innerHeight && elemBottom >= 0;
         return isVisible;
     }
 }

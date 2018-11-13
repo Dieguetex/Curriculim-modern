@@ -132,10 +132,6 @@ body, html {
   color: #777;
 }
 
-body main div.bgimg-1, html main div.bgimg-1 {
-  z-index: -1;
-}
-
 body .container, html .container {
   display: grid;
   grid-template-columns: 15% 35% 35% 15%;
@@ -157,7 +153,7 @@ body .icons, html .icons {
   top: 90%;
   width: 100%;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.801);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 body .icons a, html .icons a {
@@ -174,11 +170,11 @@ body .icons .icon, html .icons .icon {
 }
 
 body nav.navMobile, html nav.navMobile {
-  background-color: rgba(51, 51, 51, 0.9);
+  background-color: rgba(75, 75, 75, 0.9);
   position: fixed;
   top: 4rem;
   right: -100%;
-  width: 100%;
+  width: 50%;
   opacity: 0;
   transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
   z-index: 11;
@@ -252,6 +248,10 @@ body .programador .containerSkills h2, body .londres .containerSkills h2, body .
 body .programador .containerSkills div.skillsBar, body .londres .containerSkills div.skillsBar, body .realizacion .containerSkills div.skillsBar, html .programador .containerSkills div.skillsBar, html .londres .containerSkills div.skillsBar, html .realizacion .containerSkills div.skillsBar {
   grid-column-start: 2;
   grid-column-end: 6;
+}
+
+body .programador .containerSkills div.skillsBar .hidden, body .londres .containerSkills div.skillsBar .hidden, body .realizacion .containerSkills div.skillsBar .hidden, html .programador .containerSkills div.skillsBar .hidden, html .londres .containerSkills div.skillsBar .hidden, html .realizacion .containerSkills div.skillsBar .hidden {
+  visibility: hidden;
 }
 
 body .programador .containerSkills div.skillsIcons, body .londres .containerSkills div.skillsIcons, body .realizacion .containerSkills div.skillsIcons, html .programador .containerSkills div.skillsIcons, html .londres .containerSkills div.skillsIcons, html .realizacion .containerSkills div.skillsIcons {
@@ -365,7 +365,7 @@ body .bgimg-1, html .bgimg-1 {
   background-image: url("../../dist/assets/IMG_20160807_133956_HDR.jpg");
   min-height: 100vh;
   background-position: 42%;
-  z-index: 1;
+  /* z-index: 1; */
   /* min-height: 100%; */
 }
 
@@ -476,6 +476,7 @@ body footer p, html footer p {
     display: none;
   }
   body nav.navMobile {
+    width: 100%;
     display: block;
     position: absolute;
     top: 0;
@@ -507,6 +508,11 @@ body footer p, html footer p {
 }
 
 @media screen and (min-width: 820px) {
+  body, html {
+    /*     div.bgimg-1{
+      z-index: -1;
+    } */
+  }
   body .caption span.border, body div.captionHeader, body .caption span.border, body div.captionHeader, html .caption span.border, html div.captionHeader, html .caption span.border, html div.captionHeader {
     top: 50%;
   }
