@@ -374,7 +374,6 @@ body .bgimg-1, html .bgimg-1 {
 body .bgimg-2, html .bgimg-2 {
   background-image: url("../../dist/assets/6.jpg");
   min-height: 400px;
-  background-position: 55%;
 }
 
 body .bgimg-3, html .bgimg-3 {
