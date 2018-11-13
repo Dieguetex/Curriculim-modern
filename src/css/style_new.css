@@ -250,8 +250,9 @@ body .programador .containerSkills div.skillsBar, body .londres .containerSkills
   grid-column-end: 6;
 }
 
-body .programador .containerSkills div.skillsBar .hidden, body .londres .containerSkills div.skillsBar .hidden, body .realizacion .containerSkills div.skillsBar .hidden, html .programador .containerSkills div.skillsBar .hidden, html .londres .containerSkills div.skillsBar .hidden, html .realizacion .containerSkills div.skillsBar .hidden {
+body .programador .containerSkills div.skillsBar .hidden::before, body .londres .containerSkills div.skillsBar .hidden::before, body .realizacion .containerSkills div.skillsBar .hidden::before, html .programador .containerSkills div.skillsBar .hidden::before, html .londres .containerSkills div.skillsBar .hidden::before, html .realizacion .containerSkills div.skillsBar .hidden::before {
   visibility: hidden;
+  display: none;
 }
 
 body .programador .containerSkills div.skillsIcons, body .londres .containerSkills div.skillsIcons, body .realizacion .containerSkills div.skillsIcons, html .programador .containerSkills div.skillsIcons, html .londres .containerSkills div.skillsIcons, html .realizacion .containerSkills div.skillsIcons {
@@ -301,6 +302,7 @@ body .programador .containerSkills div.skillsIcons i, body .londres .containerSk
 }
 
 body .programador .containerSkills .bar, body .londres .containerSkills .bar, body .realizacion .containerSkills .bar, html .programador .containerSkills .bar, html .londres .containerSkills .bar, html .realizacion .containerSkills .bar {
+  display: block;
   background-color: #436775a8;
   padding: 2px;
   border-radius: 10px;

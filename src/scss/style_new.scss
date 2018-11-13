@@ -122,8 +122,9 @@ body, html {
         grid-column-start: 2;
         grid-column-end: 6;
 
-        .hidden{
+        .hidden::before{
           visibility: hidden;
+          display: none;
         }
       }
       div.skillsIcons{
@@ -168,6 +169,7 @@ body, html {
       }
       
       .bar{
+        display:block;
         background-color: #436775a8;
         padding: 2px;
         border-radius: 10px;
